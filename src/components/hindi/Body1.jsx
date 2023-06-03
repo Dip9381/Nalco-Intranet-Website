@@ -1164,6 +1164,16 @@ images.map((val,index)=>{
               })){
                 return 'highlight';
               }
+              else if(c1date.find((val)=>{
+                if(val[1]===rdate){
+                  return true;
+                }
+                else{
+                  return false;
+                }
+              })){
+                return 'highlight1';
+              }
               else{
                 return '';
               }
@@ -1184,7 +1194,7 @@ images.map((val,index)=>{
                     if(document.getElementsByClassName('highlight')[i].children[0].innerHTML==cday){
                       document.getElementsByClassName('highlight')[i].children[0].classList.add('hover');
                       document.getElementsByClassName('highlight')[i].children[0].title=val[2];
-                    // console.log(document.getElementsByClassName('highlight')[i].children[0]);
+
                     }
                   }
                   return true;
@@ -1192,7 +1202,26 @@ images.map((val,index)=>{
                 else{
                   return false;
                 }
-              }))
+              })){
+                //
+              }
+              else if(c1date.find(val=>{
+                if(val[1]===rdate){
+                  for(let i=0;i<document.getElementsByClassName('highlight1').length;i++){
+                    if(document.getElementsByClassName('highlight1')[i].children[0].innerHTML==cday){
+                      document.getElementsByClassName('highlight1')[i].children[0].classList.add('hover');
+                      document.getElementsByClassName('highlight1')[i].children[0].title=val[2];
+
+                    }
+                  }
+                  return true;
+                }
+                else{
+                  return false;
+                }
+              })){
+                //
+              }
               return '';
             }}
             />
