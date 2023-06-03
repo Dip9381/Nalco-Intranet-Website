@@ -17,6 +17,7 @@ const Body = () => {
   const [activeTab2, setActiveTab2] = useState(6);
   const [date, setdate] = useState(new Date());
   const cdate = [[1,'08-05-2023','def jayanti'],[2,'15-05-2023','abc jayanti'],[3,'08-06-2023','xyj jayanti']];
+  const c1date = [[1,'09-05-2023','def jayanti'],[2,'16-05-2023','abc jayanti'],[3,'09-06-2023','xyj jayanti']];
   const [images,setimages]=useState([]);
   // const [det,setdet]=useState('');
   const[data1,setdata1]=useState([]);
