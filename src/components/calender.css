@@ -9,11 +9,21 @@
   /* background-color: #d10000 !important; */
 }
 .highlight:hover {
-  color:rgb(92, 165, 145) !important;
+  color:rgb(255, 255, 255) !important;
   font-weight: bolder !important;
-  background-color: #d10000;
   cursor: pointer !important;
-  background-color: rgb(250, 250, 191) !important;
+  background-color: rgb(92, 165, 145) !important;
+}
+.highlight1 {
+  color:rgb(254, 97, 0) !important;
+  font-weight: bolder !important;
+  /* background-color: #d10000 !important; */
+}
+.highlight1:hover {
+  color:rgb(255, 255, 255) !important;
+  font-weight: bolder !important;
+  cursor: pointer !important;
+  background-color: rgb(255, 0, 0) !important;
 }
 .hover{
   background-color: inherit;

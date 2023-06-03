@@ -15,6 +15,7 @@ const Body = () => {
   const [activeTab2, setActiveTab2] = useState(6);
   const [date, setdate] = useState(new Date());
   const cdate = [[1,'08-05-2023','def jayanti'],[2,'15-05-2023','abc jayanti'],[3,'08-06-2023','xyj jayanti']];
+  const c1date = [[1,'09-05-2023','def jayanti'],[2,'16-05-2023','abc jayanti'],[3,'09-06-2023','xyj jayanti']];
   const [images,setimages]=useState([]);
   // const [det,setdet]=useState('');
   const[data1,setdata1]=useState([]);
@@ -1162,6 +1163,16 @@ images.map((val,index)=>{
               })){
                 return 'highlight';
               }
+              else if(c1date.find((val)=>{
+                if(val[1]===rdate){
+                  return true;
+                }
+                else{
+                  return false;
+                }
+              })){
+                return 'highlight1';
+              }
               else{
                 return '';
               }
@@ -1182,7 +1193,7 @@ images.map((val,index)=>{
                     if(document.getElementsByClassName('highlight')[i].children[0].innerHTML==cday){
                       document.getElementsByClassName('highlight')[i].children[0].classList.add('hover');
                       document.getElementsByClassName('highlight')[i].children[0].title=val[2];
-                    // console.log(document.getElementsByClassName('highlight')[i].children[0]);
+
                     }
                   }
                   return true;
@@ -1190,7 +1201,26 @@ images.map((val,index)=>{
                 else{
                   return false;
                 }
-              }))
+              })){
+                //
+              }
+              else if(c1date.find(val=>{
+                if(val[1]===rdate){
+                  for(let i=0;i<document.getElementsByClassName('highlight1').length;i++){
+                    if(document.getElementsByClassName('highlight1')[i].children[0].innerHTML==cday){
+                      document.getElementsByClassName('highlight1')[i].children[0].classList.add('hover');
+                      document.getElementsByClassName('highlight1')[i].children[0].title=val[2];
+
+                    }
+                  }
+                  return true;
+                }
+                else{
+                  return false;
+                }
+              })){
+                //
+              }
               return '';
             }}
             />
