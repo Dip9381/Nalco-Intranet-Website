@@ -363,37 +363,41 @@
 #body{
     margin-top: 10px;
     display: flex;
-    height: 80%;
+    height: 40% !important;
 }
 .col1{
     width: 25%;
     /* border: 0.5px solid black;  */
-    height: 100%;
+    height: 100% !important;
     /* background-color: aqua; */
     /* height: 100%; */
     margin-left: 2%;
     /* border: 1px solid black; */
 }
-.col1>div:nth-child(1){
-  height: 310px;
-  /* padding-top: 10px; */
-  /* background-image: linear-gradient(white,#B6EAFA); */
-  /* background: url("../images/bday.jpg") no-repeat; */
-  /* background-size: 100% 100%; */
+.col1div2{
+  height: 311px !important;
   padding-top: 10px;
+  padding-bottom: 10px;
 }
 .info{
-  height: 300px;
+  height: 311px !important;
 }
 .info>div:nth-child(1)>span{
   padding: 5px;
   color: black;
   font-weight: 400;
 }
+.info>div:nth-child(1){
+  height: 10%;
+}
+.info>div:nth-child(2){
+  height: 80%;
+}
 .col1>div:nth-child(2){
-  overflow: scroll;
+  overflow: scroll !important;
   border-radius: 10px;
   height: 300px;
+  /* height: 10% !important; */
   /* background-color: #cf1818; */
   /* margin: 0  ; */
   margin-top: 2%;
@@ -435,11 +439,14 @@
     background-color: rgb(255, 206, 82);
     font-size: 1.2em;
 }
-.person{
-  
+.person>.carousel-inner >.carousel-item{
+  height: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  /* background-color:#b84fce ; */
 }
 .person>.carousel-inner >.carousel-item> img{
-    height: 48%;
+    height: 60%;
     width: 100%;
     aspect-ratio: 1.1/1;
 }
@@ -710,12 +717,13 @@ table{
 }
 .person{
   width: 50%;
-  height: 80%;
+  height: 100% !important;
   margin-left: auto;
   margin-right: auto;
   border-radius: 10px;
   padding: 10px;
-  background-color: brown;
+  background-color: rgba(207, 199, 199, 0.8);
+  margin-bottom: 5%;
   /* border: 1px solid black; */
 }
 .hover{
@@ -736,7 +744,8 @@ color: white;
 }
 .carousel-item>div{
   background-color: burlywood;
-  height: 20%;
+  height: 42%;
+  border-radius: 10px;
 }
 
 /* responsivness */

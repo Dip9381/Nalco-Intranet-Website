@@ -114,51 +114,7 @@ images.map((val,index)=>{
               </div>
               <div style={{ marginTop: "5%" }}>
                 {activeTab2 === 6 && (
-                  // <div
-                  //   id="carouselExampleControlsNoTouching"
-                  //   class="carousel slide person"
-                  //   data-bs-touch="false"
-                  //   data-bs-interval="false"
-                  // >
-                  //   <div class="carousel-inner">
-                  //     <div class="carousel-item active">
-                  //       <img src={person} class="d-block" alt="..." />
-                  //       <div>Happy birthday</div>
-                  //     </div>
-                  //     <div class="carousel-item">
-                  //       <img src={person} class="d-block" alt="..." />
-                  //       <div>Happy birthday</div>
-                  //     </div>
-                  //     <div class="carousel-item">
-                  //       <img src={person} class="d-block" alt="..." />
-                  //       <div>Happy birthday</div>
-                  //     </div>
-                  //   </div>
-                  //   <button
-                  //     class="carousel-control-prev"
-                  //     type="button"
-                  //     data-bs-target="#carouselExampleControlsNoTouching"
-                  //     data-bs-slide="prev"
-                  //   >
-                  //     <span
-                  //       class="carousel-control-prev-icon"
-                  //       aria-hidden="true"
-                  //     ></span>
-                  //     <span class="visually-hidden">Previous</span>
-                  //   </button>
-                  //   <button
-                  //     class="carousel-control-next"
-                  //     type="button"
-                  //     data-bs-target="#carouselExampleControlsNoTouching"
-                  //     data-bs-slide="next"
-                  //   >
-                  //     <span
-                  //       class="carousel-control-next-icon"
-                  //       aria-hidden="true"
-                  //     ></span>
-                  //     <span class="visually-hidden">Next</span>
-                  //   </button>
-                  // </div>
+                  
                   <div
                   id="carouselExampleIndicators1"
                   className="carousel slide carousel-fade person"
@@ -193,78 +149,6 @@ images.map((val,index)=>{
                         }
                       })
                     }
-                    {/* <button
-                      type="button"
-                      data-bs-target="#carouselExampleIndicators1"
-                      data-bs-slide-to="0"
-                      className="active"
-                      aria-current="true"
-                      aria-label="Slide 11"
-                      style={{display:"none"}}
-                    ></button>
-                    <button
-                      type="button"
-                      data-bs-target="#carouselExampleIndicators1"
-                      data-bs-slide-to="1"
-                      aria-label="Slide 21"
-                      style={{display:"none"}}
-                    ></button>
-                    <button
-                      type="button"
-                      data-bs-target="#carouselExampleIndicators1"
-                      data-bs-slide-to="2"
-                      aria-label="Slide 31"
-                      style={{display:"none"}}
-                    ></button>
-                    <button
-                      type="button"
-                      data-bs-target="#carouselExampleIndicators1"
-                      data-bs-slide-to="3"
-                      aria-label="Slide 41"
-                      style={{display:"none"}}
-                    ></button>
-                    <button
-                      type="button"
-                      data-bs-target="#carouselExampleIndicators1"
-                      data-bs-slide-to="4"
-                      aria-label="Slide 41"
-                      style={{display:"none"}}
-                    ></button>
-                    <button
-                      type="button"
-                      data-bs-target="#carouselExampleIndicators1"
-                      data-bs-slide-to="5"
-                      aria-label="Slide 41"
-                      style={{display:"none"}}
-                    ></button>
-                    <button
-                      type="button"
-                      data-bs-target="#carouselExampleIndicators1"
-                      data-bs-slide-to="6"
-                      aria-label="Slide 41"
-                      style={{display:"none"}}
-                    ></button>
-                    <button
-                      type="button"
-                      data-bs-target="#carouselExampleIndicators1"
-                      data-bs-slide-to="7"
-                      aria-label="Slide 41"
-                      style={{display:"none"}}
-                    ></button>
-                    <button
-                      type="button"
-                      data-bs-target="#carouselExampleIndicators1"
-                      data-bs-slide-to="8"
-                      aria-label="Slide 41"
-                      style={{display:"none"}}
-                    ></button>
-                    <button
-                      type="button"
-                      data-bs-target="#carouselExampleIndicators1"
-                      data-bs-slide-to="9"
-                      aria-label="Slide 41"
-                      style={{display:"none"}}
-                    ></button> */}
                   </div>
                   <div className="carousel-inner">
                     {
@@ -294,46 +178,6 @@ images.map((val,index)=>{
                           </>)
                       })
                     }
-
-                    {/* <div className="slideimg carousel-item active">
-                      <img src={person} className="d-block" alt="..." />
-                      <div>
-                        Happy Birthday <br />
-                        Mr. ABC <br />
-                        DGM
-                      </div>
-                    </div>
-                    <div  className="slideimg carousel-item">
-                      <img src={person} className="d-block" alt="..." />
-                      <div>
-                        Happy Birthday <br />
-                        Mr. ABC <br />
-                        GM
-                      </div>
-                    </div>
-                    <div  className="slideimg carousel-item">
-                      <img src={person} className="d-block" alt="..." />
-                      <div>
-                        Happy Birthday <br />
-                        Mr. ABC <br />
-                        AM
-                      </div>
-                    </div>
-                    <div className="slideimg carousel-item">
-                      <img src={person} className="d-block" alt="..." />
-                      <div>
-                        Happy Birthday <br />
-                        Mr. ABC <br />
-                      </div>
-                    </div>
-                    <div className="slideimg carousel-item">
-                      <img src={person} className="d-block" alt="..." />
-                      <div>
-                        Happy Birthday <br />
-                        Mr. Dipansu <br />
-                      </div>
-                    </div> */}
-
 
                   </div>
                   <button
@@ -365,96 +209,14 @@ images.map((val,index)=>{
                 </div>
                 )}
                 {activeTab2 === 7 && (
-                  // <div
-                  //   id="carouselExampleControlsNoTouching"
-                  //   class="carousel slide person"
-                  //   data-bs-touch="false"
-                  //   data-bs-interval="false"
-                  // >
-                  //   <div class="carousel-inner">
-                  //     <div class="carousel-item active">
-                  //       <img
-                  //         src={person}
-                  //         class="d-block"
-                  //         height={10}
-                  //         alt="..."
-                  //       />
-                  //       <div>
-                  //         Happy Retirement <br />
-                  //         Mr abc <br />
-                  //         dgm
-                  //       </div>
-                  //     </div>
-                  //     <div class="carousel-item">
-                  //       <img src={person} class="d-block" alt="..." />
-                  //       <div>Happy Retirement</div>
-                  //     </div>
-                  //     <div class="carousel-item">
-                  //       <img src={person} class="d-block" alt="..." />
-                  //       <div>Happy Retirement</div>
-                  //     </div>
-                  //   </div>
-                  //   <button
-                  //     class="carousel-control-prev"
-                  //     type="button"
-                  //     data-bs-target="#carouselExampleControlsNoTouching"
-                  //     data-bs-slide="prev"
-                  //   >
-                  //     <span
-                  //       class="carousel-control-prev-icon"
-                  //       aria-hidden="true"
-                  //     ></span>
-                  //     <span class="visually-hidden">Previous</span>
-                  //   </button>
-                  //   <button
-                  //     class="carousel-control-next"
-                  //     type="button"
-                  //     data-bs-target="#carouselExampleControlsNoTouching"
-                  //     data-bs-slide="next"
-                  //   >
-                  //     <span
-                  //       class="carousel-control-next-icon"
-                  //       aria-hidden="true"
-                  //     ></span>
-                  //     <span class="visually-hidden">Next</span>
-                  //   </button>
-                  // </div>
+                  
                   <div
                   id="carouselExampleIndicators1"
                   className="carousel carousel-fade slide person"
                   data-bs-ride="carousel"
                 >
                   <div className="carousel-indicators">
-                    {/* <button
-                      type="button"
-                      data-bs-target="#carouselExampleIndicators1"
-                      data-bs-slide-to="0"
-                      className="active"
-                      aria-current="true"
-                      aria-label="Slide 11"
-                      style={{display:"none"}}
-                    ></button>
-                    <button
-                      type="button"
-                      data-bs-target="#carouselExampleIndicators1"
-                      data-bs-slide-to="1"
-                      aria-label="Slide 21"
-                      style={{display:"none"}}
-                    ></button>
-                    <button
-                      type="button"
-                      data-bs-target="#carouselExampleIndicators1"
-                      data-bs-slide-to="2"
-                      aria-label="Slide 31"
-                      style={{display:"none"}}
-                    ></button>
-                    <button
-                      type="button"
-                      data-bs-target="#carouselExampleIndicators1"
-                      data-bs-slide-to="3"
-                      aria-label="Slide 41"
-                      style={{display:"none"}}
-                    ></button> */}
+                    
                     {
                       images.map((val,index)=>{
                         if(index==0){
@@ -485,37 +247,7 @@ images.map((val,index)=>{
                     }
                   </div>
                   <div className="carousel-inner">
-                    {/* <div className="slideimg carousel-item active">
-                      <img src={person} className="d-block" alt="..." />
-                      <div>
-                        Retirement <br />
-                        Mr. ABC <br />
-                        DGM
-                      </div>
-                    </div>
-                    <div  className="slideimg carousel-item">
-                      <img src={person} className="d-block" alt="..." />
-                      <div>
-                      Retirement <br />
-                        Mr. ABC <br />
-                        GM
-                      </div>
-                    </div>
-                    <div  className="slideimg carousel-item">
-                      <img src={person} className="d-block" alt="..." />
-                      <div>
-                      Retirement <br />
-                        Mr. ABC <br />
-                        AM
-                      </div>
-                    </div>
-                    <div className="slideimg carousel-item">
-                      <img src={person} className="d-block" alt="..." />
-                      <div>
-                      Retirement <br />
-                        Mr. ABC <br />
-                      </div>
-                    </div> */}
+              
                     {
                       images.map((val,index)=>{
                       
