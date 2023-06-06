@@ -496,27 +496,39 @@
     height: 30px;
   }
 
-.col3 > div{
-  height: 340px;
+.col3 > div:nth-child(1){
+  height: 311px;
   margin-bottom: 10px;
+  padding-top: 20px;
   /* border: 1px solid black; */
 }
-#col3p{
+.col3p{
   display: flex;
+  border-radius: 10px;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
   /* margin-bottom: 50px; */
   /* height: 200px; */
   padding-top: 2%;
   padding-left: 5%;
   padding-right: 2%;
+  border: 1px solid rgb(221, 220, 220);
+  box-shadow: 2px 2px 2px 2px rgba(210, 210, 210, 0.725);
   /* padding-bottom : 5%; */
+  cursor: pointer;
 }
-#col3p>p{
+.col3p:hover{
+  box-shadow: 2px 2px 10px 5px rgba(210, 210, 210, 0.725);
+}
+.col3p>p{
   font-weight: bold;
   font-size: 18px;
 }
-#col3p>img{
+.col3p>img{
   height: 70px;
-  margin-left: 30px;
+  margin-left: 50px;
+  /* float: right; */
 }
 .col3>div:nth-child(1){
   /* padding-top: 5%;
@@ -575,21 +587,32 @@
   text-decoration: underline;
 }
 .col3>div:nth-child(2){
-  height: 300px;
-  border: 1px solid rgb(228, 228, 228);
   border-radius: 10px;
-  display: flex;
+  border: 1px solid rgb(220, 220, 220);
+  height: 290px;
 }
-.col3>div:nth-child(2)>div{
-  width: 49%;
+.col3>div:nth-child(2)>div:nth-child(2){
+  border-radius: 10px;
+  /* display: flex; */
+  /* background-color: #b84fce; */
+}
+.col3>div:nth-child(2)>div:nth-child(1){
+  padding-left: 20px;
+  padding-bottom: 10px;
+}
+.col3>div:nth-child(2)>div:nth-child(2)>div{
+  width: 100%;
+  /* border: 1px solid rgb(228, 228, 228); */
   overflow: scroll;
+  border-radius: 10px;
+  height: 290px;
 }
 .active0{
   /* background-image: linear-gradient(90deg,grey,white,grey); */
   background-image: linear-gradient(white,#B6EAFA);
   color: #cf1818;
   font-weight: bold;
-  font-size: 1em !important;
+  font-size: 0.8em !important;
 }
 .nonactive{
   /* background-color: white; */
@@ -617,7 +640,7 @@
   cursor: pointer;
   /* background-color: #666; */
   /* background-image: linear-gradient(90deg,rgb(90, 90, 250) 10%,white 50%,rgb(90, 90, 250) 90%); */
-  font-size: 1.1em;
+  font-size: 0.7em;
   margin-right: 2px;
   margin-bottom: 5px;
   /* border-top: black 1px solid;
@@ -627,7 +650,7 @@
   border-radius: 5px;
   /* border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px; */
-  padding: 3px 10px;
+  padding: 3px 5px;
   /* background-color: #003f20; */
 }
 #box4_2>div>span:nth-child(1){
@@ -647,7 +670,7 @@
 #box4_2>div>div>p>ul{
   columns: 2;
 }
-#box4_2>div:nth-child(1)>div:nth-child(7){
+#box4_2>div:nth-child(1)>div:nth-child(10){
   overflow: scroll;
   /* background-color: #003f20; */
   height: 220px;
@@ -755,6 +778,10 @@ color: white;
   border-radius: 10px;
 }
 
+#hidnav{
+  display: none;
+}
+
 /* responsivness */
 
 @media screen and (max-width:600px) {
@@ -774,8 +801,172 @@ color: white;
   #headdesign1,#headdesign2{
     height: 60px;
   }
+
+/*  */
+
+#navbar2{
+  /* border: 1px solid black; */
+  width: 100%;
+  /* padding-top: 0.5%; */
+  /* padding-bottom: 3%; */
+  list-style: none inside;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  /* height: 6%; */
+  height: 50px;
+  border-radius: 10px;
+  display: none;
+  /* display: flex; */
+}
+
+#navbar2 li {
+display: block;
+position:relative;
+float: left;
+width: 100%;
+/* background-image: linear-gradient(90deg,grey,white,grey); */
+/* background: #E76161; */
+background-image: linear-gradient(90deg,rgb(255, 211, 211) 2%,#E76161,rgb(255, 211, 211) 98%);
+color: rgb(255, 149, 149);
+font-weight: bold;
+/* background-color: #84d8ae; */
+
+/* height: 60px; */
+/* padding-top: 5px; */
+/* padding-bottom: 10px; */
+/* menu background color */
+text-align: center;
+}
+#navbar2 li a {
+display: block;
+font-size: 100%;
+padding: 0;
+margin-top: 0;
+text-decoration: none;
+width: 100%;
+/* this is the width of the menu items */
+line-height: 50px;
+/* this is the hieght of the menu items */
+color: #ffffff;
+/* list item font color */
+/* background-color: #84d8ae; */
+
+text-align: center;
+/* margin-left: 25%; */
+}
+#navbar2>li:nth-child(8){
+border-bottom-right-radius: 10px;
+}
+
+#navbar2 li li a {
+font-size: 90%;
+line-height: 20px;
+border: 1px solid rgb(188, 255, 183);
+  background: #E76161;
+}
+#navbar2 li li a:hover {
+  background: #ffc1b9;
+}
+#navbar2 li:hover >a{
+color: black;
+animation: blinks 1s infinite;
+}
+@keyframes blinks {
+0%{
+  color: rgb(255, 127, 178);
+}
+25%{
+  color: rgb(255, 255, 255);
+}
+50%{
+  color: rgb(255, 127, 178);
+}
+75%{
+  color: rgb(255, 255, 255);
+}
+100%{
+  color: rgb(255, 127, 178);
+}
+}
+/* highlights current hovered list item and the parent list items when hovering over sub menues */
+
+#navbar2 ul {
+position: absolute;
+padding: 0;
+left: 0;
+display: none;
+/* hides sublists */
+}
+
+#navbar2 li:hover ul ul {
+display: none;
+}
+#navbar2 li:hover ul ul ul{
+display: none;
+}
+#navbar2 li:hover ul ul:hover ul{
+display: block;
+position: absolute;
+z-index: 99999;
+width: 100%;
+}
+
+/* hides sub-sublists */
+
+#navbar2 li:hover ul {
+display: block;
+position: absolute;
+z-index: 99999;
+width: 100%;
+margin-left: 100%;
+margin-top: -50px;
+}
+
+/* shows sublist on hover */
+
+#navbar2 li li:hover ul {
+display: block;
+/* shows sub-sublist on hover */
+margin-left: 100%;
+/* this should be the same width as the parent list item */
+margin-left: 100%;
+margin-top: -20px;
+/* position0 relative;
+z-index: 99999; */
+/* aligns top of sub menu with top of list item */
+}
+
+
+
+/*  */
+
+
+
+
+
+#hidnav{
+  display: block;
+  z-index: 2;
+  position: absolute;
+  width: 30%;
+  border-radius: 10px;
+  height: 44%;
+}
+#hidbody{
+  z-index: -1;
+}
   #navbar{
     height: 30px;
+    display: none;
+  }
+  #nav3{
+    padding-left: 8%;
+    font-size: 30px;
+    width: 40%;
+    display: block;
+    background-color: burlywood;
+    border-radius: 10px;
   }
   #navbar li{
     background-image: linear-gradient(90deg,rgb(255, 211, 211) 1%,#E76161,rgb(255, 211, 211) 99%);
@@ -864,10 +1055,10 @@ color: white;
   .active0{
     font-size: 0.85em !important;
   }
-  #col3p>p{
+  .col3p>p{
     font-size: 20px;
   }
-  #col3p>img{
+  .col3p>img{
     margin-left: 80px;
   }
   .col3>div:nth-child(1){

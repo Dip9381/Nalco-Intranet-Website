@@ -12,6 +12,7 @@ import Footer1 from "./components/hindi/Footer1"
 import Footer from "./components/Footer.jsx"
 import {useNavigate } from "react-router-dom";
 import { Routes,Route} from "react-router-dom";
+import Navbar2 from "./components/Navbar2.jsx";
 function App() {
   const navigate=useNavigate();
   const [bit,setbit]=useState(1)
@@ -58,7 +59,12 @@ function App() {
           </div>
          <Navbar handle={callback}/>
          <Flash />
-          <Body />
+         <div>
+          <div id="hidnav">
+            {/* <Navbar2 /> */}
+          </div>
+          <div id="hidbody"><Body /></div>
+         </div>
         </div>
       </div>
       <Footer />
@@ -100,37 +106,6 @@ function App() {
         </>
       }></Route>
     </Routes>
-      {/* <div className="contain">
-        <div className="box">
-          <div id="heading">
-            <div className="head1">
-              <img id="headdesign1" src={head1} alt="" />
-              <span id="headdetails">
-                <div>
-                  <span className="headtext">
-                    नाल्को
-                  </span>
-                  <img
-                    id="nalco"
-                    src={nalco}
-                    alt=""
-                  />
-                  <span className="headtext">
-                    Nalco
-                  </span>
-                </div>
-                <span id="text">The Industrial Konark</span>
-              </span>
-              <img id="headdesign2" src={head2} alt="" />
-            </div>
-            <div></div>
-          </div>
-         <Navbar handle={callback}/>
-         <Flash />
-          <Body />
-        </div>
-      </div> */}
-      {/* <Footer /> */}
     </>
   );
 }

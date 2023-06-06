@@ -13,6 +13,7 @@ const Navbar = (props) => {
   },[counter])
   return (
   
+   <>
     <ul id="navbar">
       <li>
         <a>Applications</a>
@@ -790,6 +791,7 @@ const Navbar = (props) => {
 </label>
      </li>
     </ul>
+   </>
   );
 };
 
