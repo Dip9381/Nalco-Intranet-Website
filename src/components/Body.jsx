@@ -306,7 +306,88 @@ images.map((val,index)=>{
             </div>
           </div>
           <div>
-            <Tweet tweetId="1658008488927191040" />
+          <Calendar onChange={setdate} value={date} 
+            tileClassName={({date})=>{
+              let day=date.getDate();
+              let month=date.getMonth()+1;
+              if(day<10)
+              day='0'+day;
+              if(month<10)
+              month='0'+month;
+              let year=date.getFullYear();
+              let rdate=day+"-"+month+"-"+year;
+              if(cdate.find((val)=>{
+                if(val[1]===rdate){
+                  return true;
+                }
+                else{
+                  return false;
+                }
+              })){
+                return 'highlight';
+              }
+              else if(c1date.find((val)=>{
+                if(val[1]===rdate){
+                  return true;
+                }
+                else{
+                  return false;
+                }
+              })){
+                return 'highlight1';
+              }
+              else{
+                return '';
+              }
+            }}
+            tileContent={({date})=>{
+              let day=date.getDate();
+              let cday=day;
+              let month=date.getMonth()+1;
+              if(day<10)
+              day='0'+day;
+              if(month<10)
+              month='0'+month;
+              let year=date.getFullYear();
+              let rdate=day+"-"+month+"-"+year;
+              if(cdate.find(val=>{
+                if(val[1]===rdate){
+                  for(let i=0;i<document.getElementsByClassName('highlight').length;i++){
+                    if(document.getElementsByClassName('highlight')[i].children[0].innerHTML==cday){
+                      document.getElementsByClassName('highlight')[i].children[0].classList.add('hover');
+                      document.getElementsByClassName('highlight')[i].children[0].title=val[2];
+
+                    }
+                  }
+                  return true;
+                }
+                else{
+                  return false;
+                }
+              })){
+                //
+              }
+              else if(c1date.find(val=>{
+                if(val[1]===rdate){
+                  for(let i=0;i<document.getElementsByClassName('highlight1').length;i++){
+                    if(document.getElementsByClassName('highlight1')[i].children[0].innerHTML==cday){
+                      document.getElementsByClassName('highlight1')[i].children[0].classList.add('hover');
+                      document.getElementsByClassName('highlight1')[i].children[0].title=val[2];
+
+                    }
+                  }
+                  return true;
+                }
+                else{
+                  return false;
+                }
+              })){
+                //
+              }
+              return '';
+            }}
+            />
+            {/* <Tweet tweetId="1658008488927191040" /> */}
           </div>
         </div>
 
@@ -875,7 +956,7 @@ images.map((val,index)=>{
           </div>
 
           <div>
-          <Calendar onChange={setdate} value={date} 
+          {/* <Calendar onChange={setdate} value={date} 
             tileClassName={({date})=>{
               let day=date.getDate();
               let month=date.getMonth()+1;
@@ -955,7 +1036,13 @@ images.map((val,index)=>{
               }
               return '';
             }}
-            />
+            /> */}
+            <div>
+             <Tweet tweetId="1658008488927191040" />
+            </div>
+            <div>
+             <Tweet tweetId="1665704315342798848"/>
+            </div>
           </div>
         </div>
       </div>

@@ -575,7 +575,14 @@
   text-decoration: underline;
 }
 .col3>div:nth-child(2){
-  height: 60%;
+  height: 300px;
+  border: 1px solid rgb(228, 228, 228);
+  border-radius: 10px;
+  display: flex;
+}
+.col3>div:nth-child(2)>div{
+  width: 49%;
+  overflow: scroll;
 }
 .active0{
   /* background-image: linear-gradient(90deg,grey,white,grey); */

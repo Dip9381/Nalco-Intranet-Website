@@ -4,26 +4,29 @@
   }
 } */
 .highlight {
-  color:rgb(92, 165, 145) !important;
+  color:rgb(255, 255, 255) !important;
+  background-color: rgb(92, 165, 145) !important;
   font-weight: bolder !important;
   /* background-color: #d10000 !important; */
+  border-radius: 50%;
 }
 .highlight:hover {
-  color:rgb(255, 255, 255) !important;
   font-weight: bolder !important;
   cursor: pointer !important;
-  background-color: rgb(92, 165, 145) !important;
 }
 .highlight1 {
-  color:rgb(254, 97, 0) !important;
+  background-color: rgb(255, 0, 0) !important;
   font-weight: bolder !important;
+  color: white;
+  border-radius: 50%;
+
   /* background-color: #d10000 !important; */
 }
 .highlight1:hover {
-  color:rgb(255, 255, 255) !important;
+  /* color:rgb(255, 255, 255) !important; */
   font-weight: bolder !important;
   cursor: pointer !important;
-  background-color: rgb(255, 0, 0) !important;
+  /* background-color: rgb(255, 0, 0) !important; */
 }
 .hover{
   background-color: inherit;
@@ -161,6 +164,7 @@
   
   .react-calendar__tile--now {
     background: #ffff76;
+    border-radius: 50%;
   }
   
   .react-calendar__tile--now:enabled:hover,
