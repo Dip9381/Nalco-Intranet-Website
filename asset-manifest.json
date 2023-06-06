@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Nalco-Intranet-Website/static/css/main.e431f4b1.css",
-    "main.js": "/Nalco-Intranet-Website/static/js/main.b8ae9c01.js",
+    "main.css": "/Nalco-Intranet-Website/static/css/main.97bd1e2d.css",
+    "main.js": "/Nalco-Intranet-Website/static/js/main.7f735eb1.js",
     "static/js/787.5f4fa8e0.chunk.js": "/Nalco-Intranet-Website/static/js/787.5f4fa8e0.chunk.js",
     "static/media/bday.jpg": "/Nalco-Intranet-Website/static/media/bday.d96ae979714f3f799809.jpg",
     "static/media/retire.jpg": "/Nalco-Intranet-Website/static/media/retire.6b859e7929ccd5490c80.jpg",
@@ -11,12 +11,12 @@
     "static/media/nalco.png": "/Nalco-Intranet-Website/static/media/nalco.fbe24fbd29fec02edf0a.png",
     "static/media/download.png": "/Nalco-Intranet-Website/static/media/download.cf627e76559cdfc480d5.png",
     "index.html": "/Nalco-Intranet-Website/index.html",
-    "main.e431f4b1.css.map": "/Nalco-Intranet-Website/static/css/main.e431f4b1.css.map",
-    "main.b8ae9c01.js.map": "/Nalco-Intranet-Website/static/js/main.b8ae9c01.js.map",
+    "main.97bd1e2d.css.map": "/Nalco-Intranet-Website/static/css/main.97bd1e2d.css.map",
+    "main.7f735eb1.js.map": "/Nalco-Intranet-Website/static/js/main.7f735eb1.js.map",
     "787.5f4fa8e0.chunk.js.map": "/Nalco-Intranet-Website/static/js/787.5f4fa8e0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e431f4b1.css",
-    "static/js/main.b8ae9c01.js"
+    "static/css/main.97bd1e2d.css",
+    "static/js/main.7f735eb1.js"
   ]
 }
