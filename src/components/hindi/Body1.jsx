@@ -112,7 +112,7 @@ images.map((val,index)=>{
                   Retirement
                 </span>
               </div>
-              <div style={{ marginTop: "5%" }}>
+              <div style={{ marginTop: "2%" }}>
                 {activeTab2 === 6 && (
                   
                   <div
