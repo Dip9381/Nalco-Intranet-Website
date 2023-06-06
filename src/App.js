@@ -61,7 +61,7 @@ function App() {
          <Flash />
          <div>
           <div id="hidnav">
-            {/* <Navbar2 /> */}
+            <Navbar2 />
           </div>
           <div id="hidbody"><Body /></div>
          </div>
