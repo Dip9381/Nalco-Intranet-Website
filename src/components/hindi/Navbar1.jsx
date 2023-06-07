@@ -111,7 +111,7 @@ const Navbar = (props) => {
             <a>IT Policies »</a>
             <ul>
               <li>
-                <a href="/">IT Security Policy »</a>
+                <a>IT Security Policy »</a>
                 <ul>
                   <li>
                     <a href="/">English</a>

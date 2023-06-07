@@ -61,7 +61,8 @@ function App() {
          <Flash />
          <div>
           <div id="hidnav">
-            <Navbar2 />
+            {/* This navbar is for phone resolution */}
+            <Navbar2 handle={callback}/> 
           </div>
           <div id="hidbody"><Body /></div>
          </div>
@@ -99,7 +100,13 @@ function App() {
           </div>
          <Navbar1 handle={callback}/>
          <Flash />
-          <Body1 />
+         <div>
+          <div id="hidnav">
+            {/* This navbar is for phone resolution */}
+            <Navbar2 handle={callback}/> 
+          </div>
+          <div id="hidbody"><Body1 /></div>
+         </div>
         </div>
       </div>
       <Footer1 />

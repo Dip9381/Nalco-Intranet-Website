@@ -1,6 +1,17 @@
 import React from "react";
+import { useState,useEffect} from "react";
 
-const Navbar2 = () => {
+const Navbar2 = (props) => {
+  const [counter,setcounter]=useState(1);
+  function chg(){
+    if(counter==1)
+    setcounter(2);
+    else
+    setcounter(1);
+  }
+  useEffect(()=>{
+    props.handle(counter);
+  },[counter])
     const nav=(e)=>{
         e.preventDefault();
         if(document.getElementById('navbar2').style.display==='block'){
@@ -17,6 +28,12 @@ const Navbar2 = () => {
       <>
         <ul id="navbar2">
         <div style={{backgroundColor:"burlywood",borderTopRightRadius:"10px"}}><i class="fa-solid fa-bars" onClick={(e)=>nav(e)}></i></div>
+        <li style={{paddingTop:"5px"}}>
+     <label class="switch">
+  <input onClick={()=>chg()} type="checkbox"/>
+  <span class="slider"></span>
+</label>
+     </li>
           <li>
             <a>Applications</a>
             <ul>
@@ -114,7 +131,7 @@ const Navbar2 = () => {
                 <a>IT Policies »</a>
                 <ul>
                   <li>
-                    <a href="/">IT Security Policy »</a>
+                    <a>IT Security Policy »</a>
                     <ul>
                       <li>
                         <a href="/">English</a>
@@ -793,7 +810,7 @@ const Navbar2 = () => {
             </ul>
           </li>
         </ul>
-        <div id="nav3"><i class="fa-solid fa-bars" onClick={(e)=>nav(e)}></i></div>
+        <div id="nav3" onClick={(e)=>nav(e)}><i class="fa-solid fa-bars"></i></div>
       </>
     </div>
   );

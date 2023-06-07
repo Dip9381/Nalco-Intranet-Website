@@ -12,9 +12,11 @@ import axios from "axios";
 import bday from "../../images/bday.jpg";
 import retire from "../../images/retire.jpg";
 const Body = () => {
-  const [activeTab, setActiveTab] = useState(2);
+  // const navigate=useNavigate();
+  // const [activeTab, setActiveTab] = useState(2);
   const [activeTab1, setActiveTab1] = useState(4);
   const [activeTab2, setActiveTab2] = useState(6);
+  const [activeTab3, setActiveTab3] = useState(10);
   const [date, setdate] = useState(new Date());
   const cdate = [[1,'08-05-2023','def jayanti'],[2,'15-05-2023','abc jayanti'],[3,'08-06-2023','xyj jayanti']];
   const c1date = [[1,'09-05-2023','def jayanti'],[2,'16-05-2023','abc jayanti'],[3,'09-06-2023','xyj jayanti']];
@@ -65,15 +67,21 @@ images.map((val,index)=>{
   // console.log(index)
 })
 },[images])
-  const handleClick = (tabNumber) => {
-    setActiveTab(tabNumber);
-  };
+  // const handleClick = (tabNumber) => {
+  //   setActiveTab(tabNumber);
+  // };
   const handleClicks = (tabNumber) => {
     setActiveTab1(tabNumber);
   };
   const handleClicks1 = (tabNumber) => {
     setActiveTab2(tabNumber);
   };
+  const handleClicks2 =(tabNumber)=>{
+    setActiveTab3(tabNumber);
+  }
+  const direct =(link)=>{
+    window.open(link);
+  }
   useEffect(()=>{
     if(activeTab2===6){
       document.getElementsByClassName('col1div2')[0].style.backgroundImage="url('"+bday+"')";
@@ -308,7 +316,88 @@ images.map((val,index)=>{
             </div>
           </div>
           <div>
-            <Tweet tweetId="1658008488927191040" />
+          <Calendar onChange={setdate} value={date} 
+            tileClassName={({date})=>{
+              let day=date.getDate();
+              let month=date.getMonth()+1;
+              if(day<10)
+              day='0'+day;
+              if(month<10)
+              month='0'+month;
+              let year=date.getFullYear();
+              let rdate=day+"-"+month+"-"+year;
+              if(cdate.find((val)=>{
+                if(val[1]===rdate){
+                  return true;
+                }
+                else{
+                  return false;
+                }
+              })){
+                return 'highlight';
+              }
+              else if(c1date.find((val)=>{
+                if(val[1]===rdate){
+                  return true;
+                }
+                else{
+                  return false;
+                }
+              })){
+                return 'highlight1';
+              }
+              else{
+                return '';
+              }
+            }}
+            tileContent={({date})=>{
+              let day=date.getDate();
+              let cday=day;
+              let month=date.getMonth()+1;
+              if(day<10)
+              day='0'+day;
+              if(month<10)
+              month='0'+month;
+              let year=date.getFullYear();
+              let rdate=day+"-"+month+"-"+year;
+              if(cdate.find(val=>{
+                if(val[1]===rdate){
+                  for(let i=0;i<document.getElementsByClassName('highlight').length;i++){
+                    if(document.getElementsByClassName('highlight')[i].children[0].innerHTML==cday){
+                      document.getElementsByClassName('highlight')[i].children[0].classList.add('hover');
+                      document.getElementsByClassName('highlight')[i].children[0].title=val[2];
+
+                    }
+                  }
+                  return true;
+                }
+                else{
+                  return false;
+                }
+              })){
+                //
+              }
+              else if(c1date.find(val=>{
+                if(val[1]===rdate){
+                  for(let i=0;i<document.getElementsByClassName('highlight1').length;i++){
+                    if(document.getElementsByClassName('highlight1')[i].children[0].innerHTML==cday){
+                      document.getElementsByClassName('highlight1')[i].children[0].classList.add('hover');
+                      document.getElementsByClassName('highlight1')[i].children[0].title=val[2];
+
+                    }
+                  }
+                  return true;
+                }
+                else{
+                  return false;
+                }
+              })){
+                //
+              }
+              return '';
+            }}
+            />
+            {/* <Tweet tweetId="1658008488927191040" /> */}
           </div>
         </div>
 
@@ -465,6 +554,24 @@ images.map((val,index)=>{
               >
                 HRD
               </span>
+              <span
+                className={activeTab1 === 12 ? "active0" : "nonactive"}
+                onClick={() => handleClicks(12)}
+              >
+                Blacklisted/Banned Vendors
+              </span>
+              <span
+                className={activeTab1 === 13 ? "active0" : "nonactive"}
+                onClick={() => handleClicks(13)}
+              >
+                CC & CSR
+              </span>
+              <span
+                className={activeTab1 === 14 ? "active0" : "nonactive"}
+                onClick={() => handleClicks(14)}
+              >
+                SA 8000
+              </span>
               <div>
                 {activeTab1 === 4 && (
                   <p ref={eleref} className="wrapper">
@@ -496,16 +603,6 @@ images.map((val,index)=>{
                   </p>
                 )
                 }
-                {/* {
-                  activeTab1===4 ?(
-                    ()=>{
-                      for(let i=2;i<document.getElementsByClassName("wrapper")[0].children[0].childElementCount;i=i+2){
-                        document.getElementsByClassName("wrapper")[0].children[0].children[i].style.backgroundColor="grey";
-                      }
-                    }
-                  )()
-                  :({})
-                } */}
                 {activeTab1 === 5 && (
                   <p>
                     <ul>
@@ -736,6 +833,94 @@ images.map((val,index)=>{
                     </ul>
                   </p>
                 )}
+                {activeTab1 === 12 && 
+                <p>
+                <ul>
+                  <li>
+                    <a href="/">DOP 2011</a>
+                  </li>
+                  <li>
+                    <a href="/">HR Department page</a>
+                  </li>
+                  <li>
+                    <a href="/">Online execeutive appraisal</a>
+                  </li>
+                  <li>
+                    <a href="/">Online execeutive appraisal</a>
+                  </li>
+                  <li>
+                    <a href="/">Online execeutive appraisal</a>
+                  </li>
+                  <li>
+                    <a href="/">Online execeutive appraisal</a>
+                  </li>
+                  <li>
+                    <a href="/">Online execeutive appraisal</a>
+                  </li>
+                  <li>
+                    <a href="/">Online execeutive appraisal</a>
+                  </li>
+                  <li>
+                    <a href="/">Online execeutive appraisal</a>
+                  </li>
+                  <li>
+                    <a href="/">Online execeutive appraisal</a>
+                  </li>
+                  <li>
+                    <a href="/">Online execeutive appraisal</a>
+                  </li>
+                  <li>
+                    <a href="/">Online execeutive appraisal</a>
+                  </li>
+                  <li>
+                    <a href="/">Online execeutive appraisal</a>
+                  </li>
+                  <li>
+                    <a href="/">Online execeutive appraisal</a>
+                  </li>
+                  <li>
+                    <a href="/">Online execeutive appraisal</a>
+                  </li>
+                  <li>
+                    <a href="/">Online execeutive appraisal</a>
+                  </li>
+                  <li>
+                    <a href="/">Online execeutive appraisal</a>
+                  </li>
+                  <li>
+                    <a href="/">Online execeutive appraisal</a>
+                  </li>
+                  <li>
+                    <a href="/">Online execeutive appraisal</a>
+                  </li>
+                  <li>
+                    <a href="/">Online execeutive appraisal</a>
+                  </li>
+                  <li>
+                    <a href="/">Online execeutive appraisal</a>
+                  </li>
+                  <li>
+                    <a href="/">Online execeutive appraisal</a>
+                  </li>
+                  <li>
+                    <a href="/">Online execeutive appraisal</a>
+                  </li>
+                  <li>
+                    <a href="/">Online execeutive appraisal</a>
+                  </li>
+                  <li>
+                    <a href="/">Online execeutive appraisal</a>
+                  </li>
+                  <li>
+                    <a href="/">Online execeutive appraisal</a>
+                  </li>
+                  <li>
+                    <a href="/">Online execeutive appraisal</a>
+                  </li>
+                </ul>
+              </p>}
+                {activeTab1 === 13 && <p>Content for Button 3</p>}
+                {activeTab1 === 14 && <p>Content for Button 4</p>}
               </div>
             </div>
           </div>
@@ -745,222 +930,49 @@ images.map((val,index)=>{
 
         <div className="col3">
           <div>
-            <p id="col3p">
+            <p className="col3p" onClick={()=>direct('https://www.google.com')}>
               <p>
                 National Digital <br /> Library Of India <br />
               </p>
               <img src={library} alt="" />
             </p>
-            <div>
-              <div>
-              <span
-                className={activeTab === 0 ? "active0" : "nonactive"}
-                onClick={() => handleClick(0)}
-              >
-                Blacklisted/Banned Vendors
-              </span>
-              <span
-                className={activeTab === 2 ? "active0" : "nonactive"}
-                onClick={() => handleClick(2)}
-              >
-                CC & CSR
-              </span>
-              <span
-                className={activeTab === 3 ? "active0" : "nonactive"}
-                onClick={() => handleClick(3)}
-              >
-                SA 8000
-              </span>
-              </div>
-              <div>
-                {/* {activeTab === 1 && (
-                  <p>
-                    <ul>
-                      <li>
-                        <a href="/">DOP 2011</a>
-                      </li>
-                      <li>
-                        <a href="/">HR Department page</a>
-                      </li>
-                      <li>
-                        <a href="/">Online execeutive appraisal</a>
-                      </li>
-                      <li>
-                        <a href="/">Online execeutive appraisal</a>
-                      </li>
-                      <li>
-                        <a href="/">Online execeutive appraisal</a>
-                      </li>
-                      <li>
-                        <a href="/">Online execeutive appraisal</a>
-                      </li>
-                      <li>
-                        <a href="/">Online execeutive appraisal</a>
-                      </li>
-                      <li>
-                        <a href="/">Online execeutive appraisal</a>
-                      </li>
-                      <li>
-                        <a href="/">Online execeutive appraisal</a>
-                      </li>
-                      <li>
-                        <a href="/">Online execeutive appraisal</a>
-                      </li>
-                      <li>
-                        <a href="/">Online execeutive appraisal</a>
-                      </li>
-                      <li>
-                        <a href="/">Online execeutive appraisal</a>
-                      </li>
-                      <li>
-                        <a href="/">Online execeutive appraisal</a>
-                      </li>
-                      <li>
-                        <a href="/">Online execeutive appraisal</a>
-                      </li>
-                      <li>
-                        <a href="/">Online execeutive appraisal</a>
-                      </li>
-                      <li>
-                        <a href="/">Online execeutive appraisal</a>
-                      </li>
-                      <li>
-                        <a href="/">Online execeutive appraisal</a>
-                      </li>
-                      <li>
-                        <a href="/">Online execeutive appraisal</a>
-                      </li>
-                      <li>
-                        <a href="/">Online execeutive appraisal</a>
-                      </li>
-                    </ul>
-                  </p>
-                )} */}
-                {activeTab === 2 && <p>
-                  <ul>
-                    <li href="/">aa</li>
-                    <li href="/">aa</li>
-                    <li href="/">aa</li>
-                    <li href="/">aa</li>
-                    <li href="/">aa</li>
-                    <li href="/">aa</li>
-                    <li href="/">aa</li>
-                    <li href="/">aa</li>
-                    <li href="/">aa</li>
-                    <li href="/">aa</li>
-                    <li href="/">aa</li>
-                    <li href="/">aa</li>
-                    <li href="/">aa</li>
-                    <li href="/">aa</li>
-                    <li href="/">aa</li>
-                    <li href="/">aa</li>
-                    <li href="/">aa</li>
-                    <li href="/">aa</li>
-                    <li href="/">aa</li>
-                    <li href="/">aa</li>
-                    <li href="/">aa</li>
-                    <li href="/">aa</li>
-                    <li href="/">aa</li>
-                    <li href="/">aa</li>
-                    <li href="/">aa</li>
-                    <li href="/">aa</li>
-                    <li href="/">aa</li>
-                    <li href="/">aa</li>
-                    <li href="/">aa</li>
-                    <li href="/">aaaa</li>
-                  </ul>
-                  </p>}
-                {activeTab === 3 && <p>Content for Button 3</p>}
-                {activeTab === 0 && <p>Content for Button 4</p>}
-              </div>
-            </div>
+            <p className="col3p">
+              <p>
+                National Digital <br /> Library Of India <br />
+              </p>
+              <img src={library} alt="" />
+            </p>
+            <p className="col3p">
+              <p>
+                National Digital <br /> Library Of India <br />
+              </p>
+              <img src={library} alt="" />
+            </p>
           </div>
 
           <div>
-          <Calendar onChange={setdate} value={date} 
-            tileClassName={({date})=>{
-              let day=date.getDate();
-              let month=date.getMonth()+1;
-              if(day<10)
-              day='0'+day;
-              if(month<10)
-              month='0'+month;
-              let year=date.getFullYear();
-              let rdate=day+"-"+month+"-"+year;
-              if(cdate.find((val)=>{
-                if(val[1]===rdate){
-                  return true;
-                }
-                else{
-                  return false;
-                }
-              })){
-                return 'highlight';
+            <div style={{display:"block"}}>
+              <input type="radio" name="radio1" id="nalcotweet" onClick={()=>handleClicks2(10)} defaultChecked={true}/> Ministry of Mines Tweets &nbsp;&nbsp;
+              <input type="radio" name="radio1" id="minestweet" onClick={()=>handleClicks2(11)}/>  Nalco Tweets
+            </div>
+            <div>
+            <div>
+              {
+                activeTab3===10?
+                <Tweet tweetId="1658008488927191040" />
+                :<></>
               }
-              else if(c1date.find((val)=>{
-                if(val[1]===rdate){
-                  return true;
-                }
-                else{
-                  return false;
-                }
-              })){
-                return 'highlight1';
+              {
+                activeTab3===11?
+                <Tweet tweetId="1665704315342798848"/>
+                :<></>
               }
-              else{
-                return '';
-              }
-            }}
-            tileContent={({date})=>{
-              let day=date.getDate();
-              let cday=day;
-              let month=date.getMonth()+1;
-              if(day<10)
-              day='0'+day;
-              if(month<10)
-              month='0'+month;
-              let year=date.getFullYear();
-              let rdate=day+"-"+month+"-"+year;
-              if(cdate.find(val=>{
-                if(val[1]===rdate){
-                  for(let i=0;i<document.getElementsByClassName('highlight').length;i++){
-                    if(document.getElementsByClassName('highlight')[i].children[0].innerHTML==cday){
-                      document.getElementsByClassName('highlight')[i].children[0].classList.add('hover');
-                      document.getElementsByClassName('highlight')[i].children[0].title=val[2];
-
-                    }
-                  }
-                  return true;
-                }
-                else{
-                  return false;
-                }
-              })){
-                //
-              }
-              else if(c1date.find(val=>{
-                if(val[1]===rdate){
-                  for(let i=0;i<document.getElementsByClassName('highlight1').length;i++){
-                    if(document.getElementsByClassName('highlight1')[i].children[0].innerHTML==cday){
-                      document.getElementsByClassName('highlight1')[i].children[0].classList.add('hover');
-                      document.getElementsByClassName('highlight1')[i].children[0].title=val[2];
-
-                    }
-                  }
-                  return true;
-                }
-                else{
-                  return false;
-                }
-              })){
-                //
-              }
-              return '';
-            }}
-            />
+            </div>
+            </div>
           </div>
         </div>
       </div>
+      <br />
       <div>
         <img src={mining} width={"100%"} style={{aspectRatio:"14/1"}} alt="" srcset="" />
       </div>

@@ -605,7 +605,7 @@
   /* border: 1px solid rgb(228, 228, 228); */
   overflow: scroll;
   border-radius: 10px;
-  height: 290px;
+  height: 250px;
 }
 .active0{
   /* background-image: linear-gradient(90deg,grey,white,grey); */
@@ -801,6 +801,9 @@ color: white;
   #headdesign1,#headdesign2{
     height: 60px;
   }
+  #headdetails{
+    height: 64px;
+  }
 
 /*  */
 
@@ -855,7 +858,7 @@ color: #ffffff;
 text-align: center;
 /* margin-left: 25%; */
 }
-#navbar2>li:nth-child(8){
+#navbar2>li:nth-child(9){
 border-bottom-right-radius: 10px;
 }
 
@@ -942,16 +945,14 @@ z-index: 99999; */
 /*  */
 
 
-
-
-
 #hidnav{
   display: block;
   z-index: 2;
-  position: absolute;
-  width: 30%;
+  position:absolute;
+  width: 25%;
   border-radius: 10px;
   height: 44%;
+  /* top: 0px; */
 }
 #hidbody{
   z-index: -1;
@@ -961,12 +962,14 @@ z-index: 99999; */
     display: none;
   }
   #nav3{
-    padding-left: 8%;
+    padding-left: 6%;
     font-size: 30px;
     width: 40%;
     display: block;
     background-color: burlywood;
     border-radius: 10px;
+    cursor: pointer;
+    transition-delay: 10s;
   }
   #navbar li{
     background-image: linear-gradient(90deg,rgb(255, 211, 211) 1%,#E76161,rgb(255, 211, 211) 99%);
@@ -979,10 +982,13 @@ z-index: 99999; */
     font-size: 50%;
     line-height: 8px;
     border: 1px solid rgb(188, 255, 183);
-      background: #E76161;
+      /* background: #E76161; */
   }
   #navbar li li:hover ul{
     margin-top: -8px;
+  }
+  #navbar li li li:hover ul{
+    margin-top: -20px !important;
   }
   .switch{
     width: 1.5em;
@@ -1035,25 +1041,22 @@ z-index: 99999; */
   .slideimg img{
     aspect-ratio: 1.5/1;
   }
-  #box4_2{
-    padding-left: 0;
-  }
-  #box4_2>div:nth-child(1)>div:nth-child(7){
-    height: 200px;
-  }
   #box4_2>div>div>p>ul>li{
     font-size: 0.8em;
   }
   #box4_2>div>span{
-    font-size: .6em;
+    font-size: .4em;
     padding: 2px 2px;
-    margin-right: 1px;
+    margin-right: 0px;
+  }
+  #box4_2>div>div:nth-child(10){
+    height: 220px !important;
   }
   table,th,td{
     font-size: 0.8em;
   }
   .active0{
-    font-size: 0.85em !important;
+    font-size: 0.5em !important;
   }
   .col3p>p{
     font-size: 20px;

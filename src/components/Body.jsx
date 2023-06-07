@@ -557,7 +557,7 @@ images.map((val,index)=>{
                 className={activeTab1 === 12 ? "active0" : "nonactive"}
                 onClick={() => handleClicks(12)}
               >
-                Blacklisted/Banned Vendors
+                SA 8000
               </span>
               <span
                 className={activeTab1 === 13 ? "active0" : "nonactive"}
@@ -569,7 +569,7 @@ images.map((val,index)=>{
                 className={activeTab1 === 14 ? "active0" : "nonactive"}
                 onClick={() => handleClicks(14)}
               >
-                SA 8000
+                Blacklisted/Banned Vendors
               </span>
               <div>
                 {activeTab1 === 4 && (
