@@ -966,7 +966,8 @@ z-index: 99999; */
     font-size: 30px;
     width: 40%;
     display: block;
-    background-color: burlywood;
+    /* background-color: burlywood; */
+    background-image:linear-gradient(#80bdd0,white,#80bdd0);
     border-radius: 10px;
     cursor: pointer;
     transition-delay: 10s;
