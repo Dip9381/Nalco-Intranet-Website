@@ -27,7 +27,7 @@ const Navbar2 = (props) => {
     <div>
       <>
         <ul id="navbar2">
-        <div style={{backgroundColor:"burlywood",borderTopRightRadius:"10px"}}><i class="fa-solid fa-bars" onClick={(e)=>nav(e)}></i></div>
+        <div style={{backgroundColor:"burlywood",borderTopRightRadius:"10px"}}><i class="fa-solid fa-bars fa-lg" onClick={(e)=>nav(e)}></i></div>
         <li style={{paddingTop:"5px"}}>
      <label class="switch">
   <input onClick={()=>chg()} type="checkbox"/>

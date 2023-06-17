@@ -950,10 +950,11 @@ z-index: 99999; */
 #hidnav{
   display: block;
   z-index: 2;
+  top: 64px;
   position:absolute;
-  width: 25%;
+  width: 30%;
   border-radius: 10px;
-  height: 44%;
+  height: 10px !important;
   /* top: 0px; */
 }
 #hidbody{
@@ -965,12 +966,12 @@ z-index: 99999; */
   }
   #nav3{
     padding-left: 6%;
-    font-size: 30px;
-    width: 40%;
+    font-size: 20px;
+    width: 30%;
     display: block;
     /* background-color: burlywood; */
     background-image:linear-gradient(#80bdd0,white,#80bdd0);
-    border-radius: 10px;
+    border-radius: 5px;
     cursor: pointer;
     transition-delay: 10s;
   }
