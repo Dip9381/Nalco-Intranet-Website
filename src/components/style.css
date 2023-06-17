@@ -783,7 +783,9 @@ color: white;
 #hidnav{
   display: none;
 }
-
+.fa-twitter{
+  margin-top: 20px !important;
+}
 /* responsivness */
 
 @media screen and (max-width:600px) {

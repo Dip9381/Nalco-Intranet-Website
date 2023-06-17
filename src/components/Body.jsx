@@ -951,8 +951,9 @@ images.map((val,index)=>{
 
           <div>
             <div style={{display:"block"}}>
-              <input type="radio" name="radio1" id="nalcotweet" onClick={()=>handleClicks2(10)} defaultChecked={true}/> Ministry of Mines Tweets &nbsp;&nbsp;
-              <input type="radio" name="radio1" id="minestweet" onClick={()=>handleClicks2(11)}/>  Nalco Tweets
+            <i class="fa-brands fa-twitter fa-lg" style={{color:'#005eff'}}></i> &nbsp;&nbsp;
+              <input type="radio" name="radio1" id="nalcotweet" onClick={()=>handleClicks2(10)} defaultChecked={true}/> Ministry of Mines  &nbsp;&nbsp;
+              <input type="radio" name="radio1" id="minestweet" onClick={()=>handleClicks2(11)}/>  Nalco 
             </div>
             <div>
             <div>

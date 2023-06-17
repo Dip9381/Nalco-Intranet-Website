@@ -438,26 +438,6 @@ images.map((val,index)=>{
                         }
                       })
                     }
-                {/* <button
-                  type="button"
-                  data-bs-target="#carouselExampleIndicators"
-                  data-bs-slide-to="0"
-                  className="active"
-                  aria-current="true"
-                  aria-label="Slide 1"
-                ></button>
-                <button
-                  type="button"
-                  data-bs-target="#carouselExampleIndicators"
-                  data-bs-slide-to="1"
-                  aria-label="Slide 2"
-                ></button>
-                <button
-                  type="button"
-                  data-bs-target="#carouselExampleIndicators"
-                  data-bs-slide-to="2"
-                  aria-label="Slide 3"
-                ></button> */}
               </div>
               <div className="carousel-inner">
               {
@@ -477,15 +457,6 @@ images.map((val,index)=>{
                           </>)
                       })
                     }
-                {/* <div className="slideimg carousel-item active">
-                  <img src={slideimg} className="d-block" alt="..." />
-                </div>
-                <div className="slideimg carousel-item">
-                  <img src={slideimg} className="d-block" alt="..." />
-                </div>
-                <div className="slideimg carousel-item">
-                  <img src={slideimg} className="d-block" alt="..." />
-                </div> */}
               </div>
               <button
                 className="carousel-control-prev"
@@ -952,6 +923,7 @@ images.map((val,index)=>{
 
           <div>
             <div style={{display:"block"}}>
+            <i class="fa-brands fa-twitter fa-lg" style={{color:'#005eff'}}></i> &nbsp;&nbsp;
               <input type="radio" name="radio1" id="nalcotweet" onClick={()=>handleClicks2(10)} defaultChecked={true}/> Ministry of Mines Tweets &nbsp;&nbsp;
               <input type="radio" name="radio1" id="minestweet" onClick={()=>handleClicks2(11)}/>  Nalco Tweets
             </div>
